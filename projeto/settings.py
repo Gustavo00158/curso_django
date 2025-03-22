@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles', #conf. read file 
-    'recipes'
+    'recipes' #adicionamos todas as vezes que criamos um app
 ]
 
 MIDDLEWARE = [
@@ -119,6 +119,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+#STATICFILES_DIRS = [BASE_DIR+'CAMINHO', ...] Nesse caso, seria para por css goblal 
+STATIC_ROOT = BASE_DIR / 'static'  # pra rodar um static global e cria um nome q estar entre ''  -> comando  ython  manage.py collectstatic
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
